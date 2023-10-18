@@ -14,5 +14,5 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(dir),
     RequestPath = "/images"
 });
-
+ 
 app.Run();
