@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">malaAndroid</string>
+    <string name="app_name">Мій магазин</string>
+    <string name="click_me">Категорії</string>
 </resources>
