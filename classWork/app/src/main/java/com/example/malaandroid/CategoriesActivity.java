@@ -1,13 +1,15 @@
 package com.example.malaandroid;
 
-
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import com.example.malaandroid.category.CategoriesAdapter;
+import com.example.malaandroid.category.CategoryCreateActivity;
 import com.example.malaandroid.dto.category.CategoryItemDTO;
 import com.example.malaandroid.services.ApplicationNetwork;
 
@@ -48,5 +50,11 @@ public class CategoriesActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void onClickGoToCreateCategory(View view) {
+        Intent intent = new Intent(CategoriesActivity.this, CategoryCreateActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.malaandroid.R;
 import com.example.malaandroid.application.HomeApplication;
+import com.example.malaandroid.contants.Urls;
 import com.example.malaandroid.dto.category.CategoryItemDTO;
 
 import java.util.List;
@@ -33,12 +34,12 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoryCardViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull com.example.malaandroid.category.CategoryCardViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryCardViewHolder holder, int position) {
         if(categories!=null && position<categories.size()) {
             CategoryItemDTO item = categories.get(position);
             holder.getCategoryName().setText(item.getName());
             Glide.with(HomeApplication.getAppContext())
-                    .load(item.getImage())
+                    .load(Urls.BASE+"/images/"+ item.getImage())
                     .apply(new RequestOptions().override(600))
                     .into(holder.getCategoryImage());
         }

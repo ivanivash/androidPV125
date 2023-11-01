@@ -1,5 +1,6 @@
 package com.example.malaandroid.services;
 
+import com.example.malaandroid.contants.Urls;
 import com.example.malaandroid.network.CategoriesApi;
 
 import retrofit2.Retrofit;
@@ -12,7 +13,7 @@ public class ApplicationNetwork {
 
     public ApplicationNetwork() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://kovbasa.itstep.click")
+                .baseUrl(Urls.BASE)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
